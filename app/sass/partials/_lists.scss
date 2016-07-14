@@ -1,0 +1,91 @@
+// GENERIC INLINE LIST
+// ========================================================================== */
+.inline__list {
+  @include inline-list;
+}
+
+// TAGS LIST
+// ========================================================================== */
+.tags__list {
+    @include inline-list;
+    font-size: $small-text;
+}
+
+.tags__list__item {
+    & + &:before {
+        content: '+';
+    }
+}
+
+.tags__list__button {
+    @extend %button;
+    @extend .btn--default;
+    font-weight: normal;
+
+    .ws--delete:before {
+      font-size: 8px;
+      vertical-align: middle;
+      padding-right: 6px;
+    }
+}
+
+#filter__tags__remove:only-child {
+  display: none;
+}
+
+// PAGINATION LIST
+// ========================================================================== */
+.pagination__list {
+    @include list-reset;
+    line-height: $small-text;
+    font-size: $small-text;
+    text-align: center;
+}
+
+.pagination__list__item {
+  display: inline-block;
+}
+
+.pagination__list__item--previous {
+    font-size: 18px;
+
+    &::before {
+      @include vertical-separator;
+    }
+
+    &.pagination__list__item--disabled::before {
+      @include vertical-separator($foreground-color-disabled);
+    }
+}
+
+.pagination__list__item--box{
+
+  &::before, &::after {
+    @include vertical-separator;
+    vertical-align: baseline;
+  }
+}
+
+.pagination__list__item--next {
+    font-size: 18px;
+
+    &::after {
+      @include vertical-separator;
+    }
+    &.pagination__list__item--disabled::after {
+      @include vertical-separator($foreground-color-disabled);
+    }
+}
+
+.pagination__list__item--box, .pagination__fields {
+  vertical-align: middle;
+}
+
+.pagination__list__item--disabled {
+    color: $foreground-color-disabled;
+}
+
+.pagination__link {
+    @extend %no-underline-to-underline;
+    color: $link-color-default;
+}

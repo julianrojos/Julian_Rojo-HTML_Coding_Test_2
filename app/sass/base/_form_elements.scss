@@ -1,0 +1,52 @@
+// COMMON - BUTTONS, DROPDOWNS, INPUT BOXES
+// ========================================================================== */
+%form--element {
+    font-size: $small-text;
+    line-height: 27px;
+    display: inline-block;
+    height: 30px;
+    margin: 10px 5px;
+    padding: 0 10px;
+    vertical-align: middle;
+    border: 1px solid;
+    border-radius: 2px;
+}
+
+%form--element--disabled {
+    border-color: $border-color-default;
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+// BUTTONS
+// ========================================================================== */
+%button {
+    @extend %form--element;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.10);
+}
+
+@mixin button($top-color, $bottom-color, $border-color, $text-color, $text-shadow-color) {
+    color: $text-color;
+    border-color: $border-color;
+    background: linear-gradient(to bottom, $top-color 0%,$bottom-color 100%);
+    text-shadow: 0 -1px 0 $text-shadow-color;
+}
+
+// DROPDOWNS
+// ========================================================================== */
+%dropdown {
+    @extend %form--element;
+    background: linear-gradient(to bottom, #fff 0%,#f6f6f6 100%);
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.10);
+}
+
+// INPUT BOXES
+// ========================================================================== */
+%input__box {
+    @extend %form--element;
+    background-color: $background-color-default;
+    box-shadow: inset 0 2px 0 0 #ececec;
+}

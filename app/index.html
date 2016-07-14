@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>InSided_FE_Assignment</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/screen.min.css">
+</head>
+<body>
+<main class="main__container">
+  <div class="main__content">
+    <form class="form">
+      <fieldset class="form__block">
+        <legend class="form__title">Advanced search</legend>
+        <div class="form__row">
+          <div class="form__group form__group--inline">
+            <select class="dropdown dropdown--default width__200" data-trigger="filter" id="filter__registration__date__01" aria-controls="filter__registration__date__02" title="Filter by registration date">
+              <option value="" default selected>Registration date</option>
+              <option value="value_01">Lorem ipsum dolor</option>
+              <option value="value_02">Consectetur adipiscing</option>
+            </select>
+          </div>
+          <div class="form__group form__group--inline">
+            <select class="dropdown dropdown--disabled width__200" data-trigger="filter" id="filter__registration__date__02" aria-controls="filter__registration__date__03" title="Refine registration date" disabled>
+              <option value="value_01" default selected>before</option>
+              <option value="value_02">after</option>
+              <option value="value_03">on</option>
+            </select>
+          </div>
+          <div class="form__group form__group--inline">
+            <input disabled title="Enter a date: dd/mm/yy" id="filter__registration__date__03" type="text" class="input__box input__box--disabled input__box--timepicker width__200" placeholder="dd/mm/yy" />
+          </div>
+        </div>
+        <div class="form__row">
+          <div class="form__group form__group--inline">
+            <select class="dropdown dropdown--default width__200" data-trigger="filter" id="filter__usergroup__01" aria-controls="filter__usergroup__02" title="Filter by usergroup">
+              <option value="" default selected>Usergroup</option>
+              <option value="value_01">Registered user</option>
+              <option value="value_02">Moderator</option>
+              <option value="value_02">Super-user</option>
+            </select>
+          </div>
+          <div class="form__group form__group--inline">
+            <select multiple class="dropdown dropdown--multiple dropdown--disabled width__200" id="filter__usergroup__02" title="Select one or more options" disabled>
+              <optgroup label="Group 1">
+              <option value="value_01">Option #1 for group 1</option>
+              <option value="value_02">Option #2 for group 1</option>
+              <option value="value_03">Option #3 for group 1</option>
+              </optgroup>
+              <optgroup label="Group 2">
+              <option value="value_04">Option #1 for group 2</option>
+              <option value="value_05">Option #2 for group 2</option>
+              <option value="value_06">Option #3 for group 2</option>
+              </optgroup>
+            </select>
+          </div>
+        </div>
+        <button class="btn btn--success" id="btn__add__row">Add row</button>
+      </fieldset>
+      <fieldset class="form__block">
+        <legend class="form__title">Columns</legend>
+        <ul id="filter__tags__generate" class="form__multi__column__list">
+          <li class="form__multi__column__item"> <span class="wrap__checkbox wrap__checkbox--top">
+            <input  type="checkbox" id="col_checkbox_01" />
+            <label for="col_checkbox_01">Usertitle</label>
+            </span> </li>
+          <li class="form__multi__column__item"> <span class="wrap__checkbox wrap__checkbox--top">
+            <input type="checkbox" id="col_checkbox_02" />
+            <label for="col_checkbox_02">Comments</label>
+            </span> </li>
+          <li class="form__multi__column__item"> <span class="wrap__checkbox wrap__checkbox--top">
+            <input type="checkbox" id="col_checkbox_03" />
+            <label for="col_checkbox_03">Deleted comments</label>
+            </span> </li>
+          <li class="form__multi__column__item"> <span class="wrap__checkbox wrap__checkbox--top">
+            <input type="checkbox" id="col_checkbox_04" />
+            <label for="col_checkbox_04">Deleted topics</label>
+            </span> </li>
+          <li class="form__multi__column__item"> <span class="wrap__checkbox wrap__checkbox--top">
+            <input type="checkbox" id="col_checkbox_05" />
+            <label for="col_checkbox_05">Questions solved</label>
+            </span> </li>
+          <li class="form__multi__column__item"> <span class="wrap__checkbox wrap__checkbox--top">
+            <input type="checkbox" id="col_checkbox_06" />
+            <label for="col_checkbox_06">Topics</label>
+            </span> </li>
+          <li class="form__multi__column__item"> <span class="wrap__checkbox wrap__checkbox--top">
+            <input type="checkbox" id="col_checkbox_07" />
+            <label for="col_checkbox_07">Usergroup</label>
+            </span> </li>
+          <li class="form__multi__column__item"> <span class="wrap__checkbox wrap__checkbox--top">
+            <input type="checkbox" id="col_checkbox_08" />
+            <label for="col_checkbox_08">Secondary usergroup</label>
+            </span> </li>
+          <li class="form__multi__column__item"> <span class="wrap__checkbox wrap__checkbox--top">
+            <input type="checkbox" id="col_checkbox_09" />
+            <label for="col_checkbox_09">Registration date</label>
+            </span> </li>
+          <li class="form__multi__column__item"> <span class="wrap__checkbox wrap__checkbox--top">
+            <input type="checkbox" id="col_checkbox_10" />
+            <label for="col_checkbox_10">Last login</label>
+            </span> </li>
+          <li class="form__multi__column__item"> <span class="wrap__checkbox wrap__checkbox--top">
+            <input type="checkbox" id="col_checkbox_11" />
+            <label for="col_checkbox_11">Logins</label>
+            </span> </li>
+          <li class="form__multi__column__item"> <span class="wrap__checkbox wrap__checkbox--top">
+            <input type="checkbox" id="col_checkbox_12" />
+            <label for="col_checkbox_12">Last comment</label>
+            </span> </li>
+          <li class="form__multi__column__item"> <span class="wrap__checkbox wrap__checkbox--top">
+            <input type="checkbox" id="col_checkbox_28" />
+            <label for="col_checkbox_28">This item is just to show that some texts can be really long</label>
+            </span> </li>
+          <li class="form__multi__column__item"> <span class="wrap__checkbox wrap__checkbox--top">
+            <input type="checkbox" id="col_checkbox_13" />
+            <label for="col_checkbox_13">Email</label>
+            </span> </li>
+          <li class="form__multi__column__item"> <span class="wrap__checkbox wrap__checkbox--top">
+            <input type="checkbox" id="col_checkbox_14" />
+            <label for="col_checkbox_14">SSO-ID</label>
+            </span> </li>
+          <li class="form__multi__column__item"> <span class="wrap__checkbox wrap__checkbox--top">
+            <input type="checkbox" id="col_checkbox_15" />
+            <label for="col_checkbox_15">IP-address</label>
+            </span> </li>
+          <li class="form__multi__column__item"> <span class="wrap__checkbox wrap__checkbox--top">
+            <input type="checkbox" id="col_checkbox_16" />
+            <label for="col_checkbox_16">Gender</label>
+            </span> </li>
+          <li class="form__multi__column__item"> <span class="wrap__checkbox wrap__checkbox--top">
+            <input type="checkbox" id="col_checkbox_17" />
+            <label for="col_checkbox_17">Date of birth</label>
+            </span> </li>
+          <li class="form__multi__column__item"> <span class="wrap__checkbox wrap__checkbox--top">
+            <input type="checkbox" id="col_checkbox_18" />
+            <label for="col_checkbox_18">Location</label>
+            </span> </li>
+          <li class="form__multi__column__item"> <span class="wrap__checkbox wrap__checkbox--top">
+            <input type="checkbox" id="col_checkbox_19" />
+            <label for="col_checkbox_19">Interest</label>
+            </span> </li>
+          <li class="form__multi__column__item"> <span class="wrap__checkbox wrap__checkbox--top">
+            <input type="checkbox" id="col_checkbox_20" />
+            <label for="col_checkbox_20">Profession</label>
+            </span> </li>
+          <li class="form__multi__column__item"> <span class="wrap__checkbox wrap__checkbox--top">
+            <input type="checkbox" id="col_checkbox_21" />
+            <label for="col_checkbox_21">Signature</label>
+            </span> </li>
+          <li class="form__multi__column__item"> <span class="wrap__checkbox wrap__checkbox--top">
+            <input type="checkbox" id="col_checkbox_22" />
+            <label for="col_checkbox_22">Notes</label>
+            </span> </li>
+          <li class="form__multi__column__item"> <span class="wrap__checkbox wrap__checkbox--top">
+            <input type="checkbox" id="col_checkbox_23" />
+            <label for="col_checkbox_23">Badges</label>
+            </span> </li>
+          <li class="form__multi__column__item"> <span class="wrap__checkbox wrap__checkbox--top">
+            <input type="checkbox" id="col_checkbox_24" />
+            <label for="col_checkbox_24">Reputation received</label>
+            </span> </li>
+          <li class="form__multi__column__item"> <span class="wrap__checkbox wrap__checkbox--top">
+            <input type="checkbox" id="col_checkbox_25" />
+            <label for="col_checkbox_25">Reputation given</label>
+            </span> </li>
+          <li class="form__multi__column__item"> <span class="wrap__checkbox wrap__checkbox--top">
+            <input type="checkbox" id="col_checkbox_26" />
+            <label for="col_checkbox_26">Followers</label>
+            </span> </li>
+          <li class="form__multi__column__item"> <span class="wrap__checkbox wrap__checkbox--top">
+            <input type="checkbox" id="col_checkbox_27" />
+            <label for="col_checkbox_27">Following</label>
+            </span> </li>
+        </ul>
+      </fieldset>
+      <div class="form__block">
+        <button class="btn btn--primary">Update</button>
+        <a aria-role="button" class="short__text short__text--cancel" href="">Cancel</a> </div>
+    </form>
+    <div class="grid__left__right">
+      <div class="grid__left">
+        <ul id="filter__tags__stack" class="tags__list">
+          <li id="filter__tags__remove"><a href="#" class="short__text short__text--cancel">Clear selection</a></li>
+        </ul>
+      </div>
+      <div class="grid__right">
+        <ol class="pagination__list">
+          <li class="pagination__list__item pagination__list__item--first pagination__list__item--disabled">First</li>
+          <li class="pagination__list__item pagination__list__item--previous pagination__list__item--disabled"><span title="Previous page">«</span></li>
+          <li class="pagination__list__item pagination__list__item--box">
+            <label class="pagination__fields">Page
+              <input min="1" max="100" type="number" class="input__box input__box--default max__width__50" id="pagination__current__top" name="pagination__current__top" step="1" title="Enter the page you want to go" value="1">
+              of 12</label>
+          </li>
+          <li class="pagination__list__item pagination__list__item--next"><a href="#" class="pagination__link"><span title="Next page">»</span></a></li>
+          <li class="pagination__list__item pagination__list__item--last"><a href="#" class="pagination__link">Last</a></li>
+          <li class="pagination__list__item pagination__list__item--select">
+            <select class="dropdown dropdown--default" id="page__rows__select__top" name="age__rows__select__top" title="Select how many rows per page you want to see">
+              <option value="value_01" default selected>10 Rows</option>
+              <option value="value_02">15 Rows</option>
+              <option value="value_03">20 Rows</option>
+              <option value="value_04">25 Rows</option>
+              <option value="value_05">30 Rows</option>
+            </select>
+          </li>
+        </ol>
+      </div>
+    </div>
+    <div class="table__block">
+      <table class="table__users">
+        <thead>
+          <tr>
+            <th scope="col" class="user__cell"><span class="checkbox">
+              <input type="checkbox" name="user" id="checkbox__user_all">
+              <label for="checkbox__user_all" class="responsive__header__label">Select all users</label>
+            </span> <span class="user__cell__header">Username <a href="" class="icon__button ws ws--sort--down"><span class="visuallyhidden">Sort users alphabetically ascending</span></a></span> </th>
+            <th scope="col" class="user__header">Comments</th>
+            <th scope="col" class="user__header">Topics</th>
+            <th scope="col" class="user__header">Usergroup</th>
+            <th scope="col" class="user__header">Registration date</th>
+            <th scope="col" class="user__header">Last login</th>
+            <th scope="col" class="user__header">Last comment</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row" class="user__cell" data-header="Username"><span class="responsive__cell"><span class="wrap__icon"><span class="wrap__checkbox wrap__checkbox--middle">
+              <input type="checkbox" name="user" id="checkbox__user_01">
+              <label for="checkbox__user_01"><span class="visuallyhidden">Select Gerarda Cornelia Maria Schilders</span></label>
+              <img class="user__cell__image" src="assets/users/user_001.jpg" width="25" height="23" alt=" "><a href="#" title="Open Gerarda Cornelia Maria Schilders profile" class="user__cell__link">Gerarda Cornelia Maria Schilders <i class="ws ws--window icon__right" aria-hidden="true"></i></a></span> </span> </span> </th>
+            <td data-header="Comments"><span class="responsive__cell">64</span></td>
+            <td data-header="Topics"><span class="responsive__cell">9</span></td>
+            <td data-header="Usergroup"><span class="responsive__cell">Registered user</span></td>
+            <td data-header="Registration date"><span class="responsive__cell">
+              <time datetime="2012-03-19 12:00">19-mar-12 12:00</time>
+              </span></td>
+            <td data-header="Last login"><span class="responsive__cell">
+              <time datetime="2012-08-16 12:11">16-aug-12 12:11</time>
+              </span></td>
+            <td data-header="Last comment"><span class="responsive__cell">
+              <time datetime="2012-08-16 16:10">16-aug-12 16:10</time>
+              </span></td>
+          </tr>
+          <tr>
+            <th scope="row" class="user__cell" data-header="Username"><span class="responsive__cell"><span class="wrap__icon"><span class="wrap__checkbox wrap__checkbox--middle">
+              <input type="checkbox" name="user" id="checkbox__user_02">
+              <label for="checkbox__user_02"><span class="visuallyhidden">Select José Manuel Berrizabalbeitia Arespacochaga</span></label>
+              <img class="user__cell__image" src="assets/users/user_002.jpg" width="25" height="23" alt=" "><a href="#" title="Open José Manuel Berrizabalbeitia Arespacochaga profile" class="user__cell__link">José Manuel Berrizabalbeitia Arespacochaga <i class="ws ws--window icon__right" aria-hidden="true"></i></a></span> </span> </span> </th>
+            <td data-header="Comments"><span class="responsive__cell">37</span></td>
+            <td data-header="Topics"><span class="responsive__cell">-</span></td>
+            <td data-header="Usergroup"><span class="responsive__cell">Registered user</span></td>
+            <td data-header="Registration date"><span class="responsive__cell">
+              <time datetime="2011-03-20 13:57">20-mar-11 13:57</time>
+              </span></td>
+            <td data-header="Last login"><span class="responsive__cell">
+              <time datetime="2012-05-15 17:34">15-may-12 17:34</time>
+              </span></td>
+            <td data-header="Last comment"><span class="responsive__cell">
+              <time datetime="2012-05-14 20:01">14-may-12 20:01</time>
+              </span></td>
+          </tr>
+          <tr>
+            <th scope="row" class="user__cell" data-header="Username"><span class="responsive__cell"><span class="wrap__icon"><span class="wrap__checkbox wrap__checkbox--middle">
+              <input type="checkbox" name="user" id="checkbox__user_03">
+              <label for="checkbox__user_03"><span class="visuallyhidden">Select Charles David Earl Frederick Sherman</span></label>
+              <img class="user__cell__image" src="assets/users/user_006.jpg" width="25" height="23" alt=" "><a href="#" title="Open Charles David Earl Frederick Sherman profile" class="user__cell__link">Charles David Earl Frederick Sherman <i class="ws ws--window icon__right" aria-hidden="true"></i></a></span> </span> </span> </th>
+            <td data-header="Comments"><span class="responsive__cell">189</span></td>
+            <td data-header="Topics"><span class="responsive__cell">13</span></td>
+            <td data-header="Usergroup"><span class="responsive__cell">Registered user</span></td>
+            <td data-header="Registration date"><span class="responsive__cell">
+              <time datetime="2012-08-12 22:09">13-aug-12 22:09</time>
+              </span></td>
+            <td data-header="Last login"><span class="responsive__cell">
+              <time datetime="2012-08-12 22:10">13-aug-12 22:10</time>
+              </span></td>
+            <td data-header="Last comment"><span class="responsive__cell">
+              <time datetime="2012-08-12 23:50">13-aug-12 23:50</time>
+              </span></td>
+          </tr>
+          <tr>
+            <th scope="row" class="user__cell" data-header="Username"><span class="responsive__cell"><span class="wrap__icon"><span class="wrap__checkbox wrap__checkbox--middle">
+              <input type="checkbox" name="user" id="checkbox__user_04">
+              <label for="checkbox__user_04"><span class="visuallyhidden">Select Carmen Candy</span></label>
+              <img class="user__cell__image" src="assets/users/user_004.jpg" width="25" height="23" alt=" "><a href="#" title="Open Carmen Candy profile" class="user__cell__link">Carmen Candy <i class="ws ws--window icon__right" aria-hidden="true"></i></a></span> </span> </span> </th>
+            <td data-header="Comments"><span class="responsive__cell">15</span></td>
+            <td data-header="Topics"><span class="responsive__cell">80</span></td>
+            <td data-header="Usergroup"><span class="responsive__cell">Moderator</span></td>
+            <td data-header="Registration date"><span class="responsive__cell">
+              <time datetime="2012-03-19 12:00">19-mar-12 12:00</time>
+              </span></td>
+            <td data-header="Last login"><span class="responsive__cell">
+              <time datetime="2012-08-16 12:11">16-aug-12 12:11</time>
+              </span></td>
+            <td data-header="Last comment"><span class="responsive__cell">
+              <time datetime="2012-08-16 16:10">16-aug-12 16:10</time>
+              </span></td>
+          </tr>
+          <tr>
+            <th scope="row" class="user__cell" data-header="Username"><span class="responsive__cell"><span class="wrap__icon"><span class="wrap__checkbox wrap__checkbox--middle">
+              <input type="checkbox" name="user" id="checkbox__user_05">
+              <label for="checkbox__user_05"><span class="visuallyhidden">Select Dolf Dreamer</span></label>
+              <img class="user__cell__image" src="assets/users/user_005.jpg" width="25" height="23" alt=" "><a href="#" title="Open Dolf Dreamer profile" class="user__cell__link">Dolf Dreamer <i class="ws ws--window icon__right" aria-hidden="true"></i></a></span> </span> </span> </th>
+            <td data-header="Comments"><span class="responsive__cell">189</span></td>
+            <td data-header="Topics"><span class="responsive__cell">102</span></td>
+            <td data-header="Usergroup"><span class="responsive__cell">Super-user</span></td>
+            <td data-header="Registration date"><span class="responsive__cell">
+              <time datetime="2011-03-20 13:57">20-mar-11 13:57</time>
+              </span></td>
+            <td data-header="Last login"><span class="responsive__cell">
+              <time datetime="2012-05-15 17:34">15-may-12 17:34</time>
+              </span></td>
+            <td data-header="Last comment"><span class="responsive__cell">
+              <time datetime="2012-05-14 20:01">14-may-12 20:01</time>
+              </span></td>
+          </tr>
+          <tr>
+            <th scope="row" class="user__cell" data-header="Username"><span class="responsive__cell"><span class="wrap__icon"><span class="wrap__checkbox wrap__checkbox--middle">
+              <input type="checkbox" name="user" id="checkbox__user_06">
+              <label for="checkbox__user_06"><span class="visuallyhidden">Select Caitlyn Helen McCookerybook</span></label>
+              <img class="user__cell__image" src="assets/users/user_003.jpg" width="25" height="23" alt=" "><a href="#" title="Open Caitlyn Helen McCookerybook profile" class="user__cell__link">Caitlyn Helen McCookerybook <i class="ws ws--window icon__right" aria-hidden="true"></i></a></span> </span> </span> </th>
+            <td data-header="Comments"><span class="responsive__cell">10</span></td>
+            <td data-header="Topics"><span class="responsive__cell">-</span></td>
+            <td data-header="Usergroup"><span class="responsive__cell">Registered user</span></td>
+            <td data-header="Registration date"><span class="responsive__cell">
+              <time datetime="2011-03-20 13:57">20-mar-11 13:57</time>
+              </span></td>
+            <td data-header="Last login"><span class="responsive__cell">
+              <time datetime="2012-05-15 17:34">15-may-12 17:34</time>
+              </span></td>
+            <td data-header="Last comment"><span class="responsive__cell">
+              <time datetime="2012-05-14 20:01">14-may-12 20:01</time>
+              </span></td>
+          </tr>
+          <tr>
+            <th scope="row" class="user__cell" data-header="Username"><span class="responsive__cell"><span class="wrap__icon"><span class="wrap__checkbox wrap__checkbox--middle">
+              <input type="checkbox" name="user" id="checkbox__user_07">
+              <label for="checkbox__user_07"><span class="visuallyhidden">Select Jane Blackswan</span></label>
+              <img class="user__cell__image" src="assets/users/user_007.jpg" width="25" height="23" alt=" "><a href="#" title="Open Jane Blackswan profile" class="user__cell__link">Jane Blackswan <i class="ws ws--window icon__right" aria-hidden="true"></i></a></span> </span> </span> </th>
+            <td data-header="Comments"><span class="responsive__cell">98</span></td>
+            <td data-header="Topics"><span class="responsive__cell">180</span></td>
+            <td data-header="Usergroup"><span class="responsive__cell">Registered user</span></td>
+            <td data-header="Registration date"><span class="responsive__cell">
+              <time datetime="2011-03-20 13:57">20-mar-11 13:57</time>
+              </span></td>
+            <td data-header="Last login"><span class="responsive__cell">
+              <time datetime="2012-05-15 17:34">15-may-12 17:34</time>
+              </span></td>
+            <td data-header="Last comment"><span class="responsive__cell">
+              <time datetime="2012-05-14 20:01">14-may-12 20:01</time>
+              </span></td>
+          </tr>
+          <tr>
+            <th scope="row" class="user__cell" data-header="Username"><span class="responsive__cell"><span class="wrap__icon"><span class="wrap__checkbox wrap__checkbox--middle">
+              <input type="checkbox" name="user" id="checkbox__user_08">
+              <label for="checkbox__user_08"><span class="visuallyhidden">Select Jennifer Appleseed</span></label>
+              <img class="user__cell__image" src="assets/users/user_008.jpg" width="25" height="23" alt=" "><a href="#" title="Open Jennifer Appleseed profile" class="user__cell__link">Jennifer Appleseed <i class="ws ws--window icon__right" aria-hidden="true"></i></a></span> </span> </span> </th>
+            <td data-header="Comments"><span class="responsive__cell">15</span></td>
+            <td data-header="Topics"><span class="responsive__cell">-</span></td>
+            <td data-header="Usergroup"><span class="responsive__cell">Moderator</span></td>
+            <td data-header="Registration date"><span class="responsive__cell">
+              <time datetime="2012-08-12 22:09">13-aug-12 22:09</time>
+              </span></td>
+            <td data-header="Last login"><span class="responsive__cell">
+              <time datetime="2012-08-12 22:10">13-aug-12 22:10</time>
+              </span></td>
+            <td data-header="Last comment"><span class="responsive__cell">
+              <time datetime="2012-08-12 23:50">13-aug-12 23:50</time>
+              </span></td>
+          </tr>
+          <tr>
+            <th scope="row" class="user__cell" data-header="Username"><span class="responsive__cell"><span class="wrap__icon"><span class="wrap__checkbox wrap__checkbox--middle">
+              <input type="checkbox" name="user" id="checkbox__user_09">
+              <label for="checkbox__user_09"><span class="visuallyhidden">Select John Doe</span></label>
+              <img class="user__cell__image" src="assets/users/user_009.jpg" width="25" height="23" alt=" "><a href="#" title="Open John Doe profile" class="user__cell__link">John Doe <i class="ws ws--window icon__right" aria-hidden="true"></i></a></span> </span> </span> </th>
+            <td data-header="Comments"><span class="responsive__cell">37</span></td>
+            <td data-header="Topics"><span class="responsive__cell">20</span></td>
+            <td data-header="Usergroup"><span class="responsive__cell">Super-user</span></td>
+            <td data-header="Registration date"><span class="responsive__cell">
+              <time datetime="2011-03-20 13:57">20-mar-11 13:57</time>
+              </span></td>
+            <td data-header="Last login"><span class="responsive__cell">
+              <time datetime="2012-05-15 17:34">15-may-12 17:34</time>
+              </span></td>
+            <td data-header="Last comment"><span class="responsive__cell">
+              <time datetime="2012-05-14 20:01">14-may-12 20:01</time>
+              </span></td>
+          </tr>
+          <tr>
+            <th scope="row" class="user__cell" data-header="Username"><span class="responsive__cell"><span class="wrap__icon"><span class="wrap__checkbox wrap__checkbox--middle">
+              <input type="checkbox" name="user" id="checkbox__user_10">
+              <label for="checkbox__user_10"><span class="visuallyhidden">Select Bart Pinneapple</span></label>
+              <img class="user__cell__image" src="assets/users/user_010.jpg" width="25" height="23" alt=" "><a href="#" title="Open Bart Pinneapple profile" class="user__cell__link">Bart Pinneapple <i class="ws ws--window icon__right" aria-hidden="true"></i></a></span> </span> </span> </th>
+            <td data-header="Comments"><span class="responsive__cell">1245</span></td>
+            <td data-header="Topics"><span class="responsive__cell">1010</span></td>
+            <td data-header="Usergroup"><span class="responsive__cell">Super-ser</span></td>
+            <td data-header="Registration date"><span class="responsive__cell">
+              <time datetime="2011-03-20 13:57">20-mar-11 13:57</time>
+              </span></td>
+            <td data-header="Last login"><span class="responsive__cell">
+              <time datetime="2012-05-15 17:34">15-may-12 17:34</time>
+              </span></td>
+            <td data-header="Last comment"><span class="responsive__cell">
+              <time datetime="2012-05-14 20:01">14-may-12 20:01</time>
+              </span></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="table__block__footer">
+        <div class="grid__left__right">
+          <div class="grid__left">
+            <ul id="table__footer__actions" class="inline__list hidden">
+              <li>
+                <select class="dropdown dropdown--default" id="usergroup--change" name="usergroup--change">
+                  <option value="value_01" default="" selected>Change usergroup</option>
+                  <option value="value_02">Registered user</option>
+                  <option value="value_03">Super-user</option>
+                  <option value="value_04">Moderator</option>
+                </select>
+              </li>
+              <li>
+                <select class="dropdown dropdown--default" id="usergroup--add" name="usergroup--add">
+                  <option value="value_01" default="" selected>Add secondary usergroup</option>
+                  <option value="value_02">Registered user</option>
+                  <option value="value_03">Super-user</option>
+                  <option value="value_04">Moderator</option>
+                </select>
+              </li>
+              <li>
+                <select class="dropdown dropdown--default" id="usergroup--permissions" name="usergroup--permissions">
+                  <option value="value_01" default="" selected>Permissions</option>
+                  <option value="value_02">Ipsum permission</option>
+                  <option value="value_03">Lorem sit amet permission</option>
+                  <option value="value_04">Quousque tandem permission</option>
+                </select>
+              </li>
+              <li>
+                <input type="submit" class="btn btn--default" value="Apply" />
+              </li>
+            </ul>
+          </div>
+          <div class="grid__right">
+            <ul class="inline__list">
+              <li><span class="input__box input__box--default" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"><i class="ws ws--progress" aria-hidden="true"></i> 72%</span></li>
+              <li><a href="" class="btn btn--default">Export to Excel</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="grid__left__right">
+        <div class="grid__right">
+          <ol class="pagination__list">
+            <li class="pagination__list__item pagination__list__item--first pagination__list__item--disabled">First</li>
+            <li class="pagination__list__item pagination__list__item--previous pagination__list__item--disabled"><span title="Previous page">«</span></li>
+            <li class="pagination__list__item pagination__list__item--box">
+              <label class="pagination__fields">Page
+                <input min="1" max="100" type="number" class="input__box input__box--default max__width__50" id="pagination__current__bottom" name="pagination__current__bottom" step="1" title="Enter the page you want to go" value="1">
+                of 12</label>
+            </li>
+            <li class="pagination__list__item pagination__list__item--next"><a href="#" class="pagination__link"><span title="Next page">»</span></a></li>
+            <li class="pagination__list__item pagination__list__item--last"><a href="#" class="pagination__link">Last</a></li>
+            <li class="pagination__list__item pagination__list__item--select">
+              <select class="dropdown dropdown--default" id="page__rows__select__bottom" name="age__rows__select__bottom" title="Select how many rows per page you want to see">
+                <option value="value_01" default="" selected>10 Rows</option>
+                <option value="value_02">15 Rows</option>
+                <option value="value_03">20 Rows</option>
+                <option value="value_04">25 Rows</option>
+                <option value="value_05">30 Rows</option>
+              </select>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
+<!-- PICKMEUP PLUGIN -->
+<script src="js/vendor/jquery.pickmeup.min.js"></script>
+<!--  MULTIPLE SELECT PLUGIN -->
+<script src="js/vendor/multiple-select.min.js"></script>
+<script src="js/main.min.js"></script>
+</body>
+</html>

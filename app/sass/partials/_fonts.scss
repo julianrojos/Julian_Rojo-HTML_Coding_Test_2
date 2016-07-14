@@ -1,0 +1,14 @@
+// DEFAULT FONT
+// ==========================================================================
+html {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+// WEB SYMBOLS
+// ========================================================================== */
+@font-face {
+	font-family: 'web_symbolsregular';
+	src: url('../fonts/websymbols-regular-webfont.woff2') format('woff2'), url('../fonts/websymbols-regular-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}

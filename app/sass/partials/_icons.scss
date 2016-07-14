@@ -1,0 +1,40 @@
+// WEB SYMBOLS FONTICONS
+// ========================================================================== */
+.ws {
+    font: normal normal normal 14px/1 web_symbolsregular;
+    font-size: inherit;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.ws--delete:before {
+    content: "'";
+}
+
+.ws--progress:before {
+    content: "1";
+}
+
+.ws--sort--down:before {
+    content: "{";
+}
+
+.ws--sort--up:before {
+    content: "}";
+}
+
+.ws--window:before {
+    content: "D";
+}
+
+// CLICKABLE ICONS
+// ========================================================================== */
+.icon__button {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    vertical-align: middle;
+    text-decoration: none;
+}

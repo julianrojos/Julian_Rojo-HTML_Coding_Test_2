@@ -1,0 +1,32 @@
+// BOX SIZING
+// ========================================================================== */
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
+*, :after, :before {
+    box-sizing: inherit;
+}
+
+// FIELDSET + LEGEND
+// ========================================================================== */
+legend {
+    display: block;
+    padding: 0;
+    float: left;
+    width: 100%;
+}
+
+legend + * {
+    clear: both;
+}
+
+fieldset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body:not(:-moz-handler-blocked) fieldset {
+    display: table-cell;
+}

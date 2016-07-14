@@ -1,0 +1,13 @@
+// SHORT CALL TO ACTIONS
+// ========================================================================== */
+.short__text {
+    @extend %no-underline-to-underline;
+    font-size: $small-text;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+// Cancel
+.short__text--cancel {
+    color: $foreground-color-danger;
+}

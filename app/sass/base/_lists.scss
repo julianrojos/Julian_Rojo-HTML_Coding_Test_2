@@ -1,0 +1,28 @@
+// LIST RESET
+// ========================================================================== */
+@mixin list-reset {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+// INLINE LISTS
+// ========================================================================== */
+@mixin inline-list {
+    @include list-reset;
+
+    > li {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+// VERTICAL SEPARATOR
+// ========================================================================== */
+@mixin vertical-separator($separator-color: $foreground-color-default) {
+    font-size: 10px;
+    line-height: 100%;
+    padding: 0 5px;
+    content: '|';
+    vertical-align: middle;
+    color: $separator-color;
+}

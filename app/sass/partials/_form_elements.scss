@@ -1,0 +1,166 @@
+// FORM
+// ========================================================================== */
+.form {
+    font-size: $small-text;
+    border: 1px solid $border-color-default;
+    background: $background-color-primary;
+}
+
+// FORM BLOCK
+// ========================================================================== */
+.form__block {
+    padding: 20px;
+    & + & {
+        border-top: 1px solid $border-color-default;
+    }
+}
+
+// ROW
+// ========================================================================== */
+.form__row {
+  @extend %clearfix;
+}
+
+// GROUP
+// ========================================================================== */
+.form__group {
+}
+
+.form__group--inline {
+    @include breakpoint(x-small) {
+      display: inline-block;
+      vertical-align: middle;
+    }
+}
+
+// TITLES
+// ========================================================================== */
+.form__title {
+    font-size: $small-text;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+// DROPDOWNS
+// ========================================================================== */
+.dropdown {
+    @extend %dropdown;
+}
+
+.dropdown--default {
+    border-color: $border-color-default;
+}
+
+.dropdown--multiple {
+  height: auto;
+  padding: 0;
+}
+
+.dropdown--disabled {
+    @extend %form--element--disabled;
+}
+
+// BUTTONS
+// ========================================================================== */
+.btn {
+    @extend %button;
+}
+
+.btn--default {
+    @include button($background-color-default, #f6f6f6, $border-color-default, $foreground-color-default, $background-color-default);
+}
+
+.btn--primary {
+    @include button(#28bdf5, #12b6f4, $theme-color-primary, $background-color-default, $theme-color-primary);
+}
+
+.btn--success {
+    @include button(#9fcc41, #95c62d, $theme-color-success, $background-color-default, $theme-color-success);
+}
+
+// INPUT BOXES
+// ========================================================================== */
+.input__box {
+    @extend %input__box;
+}
+
+.input__box--default {
+    border-color: $border-color-default;
+}
+
+.input__box--disabled {
+    @extend %form--element--disabled;
+}
+
+// CHECKBOXES
+// ========================================================================== */
+.wrap__checkbox {
+    display: block;
+
+    label {
+        display: inline-block;
+    }
+}
+
+.wrap__checkbox--top {
+  position: relative;
+  padding-left: 18px;
+
+  input {
+    position: absolute;
+    top: 1px;
+    left: 0;
+  }
+}
+
+.wrap__checkbox--middle {
+  input {
+    display: inline-block;
+    margin-right: 2px;
+    vertical-align: middle;
+  }
+}
+
+// MULTI-COLUMN FORM LISTS
+// ========================================================================== */
+.form__multi__column__list {
+    @include list-reset;
+    font-size: $small-text;
+    column-fill: balance;
+    column-count: 2;
+
+    @include breakpoint(x-small) {
+        column-count: 3;
+    }
+
+    @include breakpoint(small) {
+        column-count: 4;
+    }
+
+    @include breakpoint(medium) {
+        column-count: 6;
+    }
+}
+
+.form__multi__column__item {
+  padding: 10px 0;
+
+  @include breakpoint(medium) {
+    padding: 5px 0;
+  }
+}
+
+// FORM ELEMENT WIDTHS
+// ========================================================================== */
+.max__width__50 {
+  max-width: 48px;
+}
+
+
+.width__200 {
+  width:100%;
+
+  @include breakpoint(x-small) {
+      width: 200px;
+  }
+}

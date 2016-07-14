@@ -1,0 +1,30 @@
+{
+  "name": "gulp_workflow",
+  "version": "1.0.0",
+  "description": "A gulp worflow to compile, minify and prefix Sass, uglify js and minify html",
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://julianrojos@bitbucket.org/julianrojos/gulp_2.git"
+  },
+  "keywords": [
+    "gulp",
+    "workflow"
+  ],
+  "author": "Julián Rojo",
+  "license": "ISC",
+  "homepage": "",
+  "devDependencies": {
+    "browser-sync": "^2.13.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-htmlmin": "^2.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^1.5.4"
+  }
+}

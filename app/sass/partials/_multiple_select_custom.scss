@@ -1,0 +1,18 @@
+// MULTIPLE SELECT CUSTOMIZATIONS
+// ========================================================================== */
+
+// Placeholder button
+.ms-choice, .ms-choice-disabled {
+    border-width: 0;
+    background-color: transparent;
+}
+
+// Dropdown container
+.ms-drop.bottom {
+    box-shadow: none;
+}
+
+// Dropdown elements
+.ms-drop li input[type=checkbox] {
+    margin-right: 5px;
+}

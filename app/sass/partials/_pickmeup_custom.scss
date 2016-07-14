@@ -1,0 +1,74 @@
+// CUSTOM STYLING / OVERWRITES FOR PICKMEUP PLUGIN
+// (other than the variables changed at the beginning of pickmeup.scss)
+// ========================================================================== */
+
+// Containers
+.pickmeup {
+    font-size: $small-text;
+    width: 168px;
+    padding: 10px 15px 15px;
+    transform: translate(0, -1px);
+    border: 1px solid $border-color-default;
+    border-top-width: 0;
+}
+
+.pickmeup .pmu-instance {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    border: 1px solid $border-color-default;
+    border-radius: 2px;
+}
+
+// Headers
+.pickmeup .pmu-instance > nav:first-child {
+    color: $foreground-color-default;
+    border-bottom: 1px solid $border-color-default;
+    background: linear-gradient(to bottom, #fff 0%,#f6f6f6 100%);
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.10);
+}
+
+.pickmeup .pmu-instance nav .pmu-button {
+    color: $foreground-color-default;
+}
+
+.pickmeup .pmu-instance nav .pmu-prev, .pickmeup .pmu-instance nav .pmu-next {
+    font-size: 70%;
+    line-height: 28px;
+    width: 15%;
+    height: 28px;
+}
+
+.pickmeup .pmu-instance:first-child:last-child nav .pmu-month {
+    font-weight: bold;
+    line-height: 28px;
+    width: 70%;
+    height: 28px;
+}
+
+.pickmeup .pmu-instance .pmu-day-of-week * {
+    font-size: 90%;
+    line-height: 23px;
+    width: percentage(1/7);
+    height: 23px;
+}
+
+// Days
+.pmu-days {
+    width: 100%;
+}
+
+.pickmeup .pmu-instance .pmu-days * {
+    line-height: 23px;
+    width: percentage(1/7);
+    height: 23px;
+}
+
+.pmu-days .pmu-button {
+    border-top: 1px solid $border-color-default;
+    border-right: 1px solid $border-color-default;
+}
+
+.pmu-days .pmu-button:nth-child(7n) {
+    border-right-width: 0;
+}

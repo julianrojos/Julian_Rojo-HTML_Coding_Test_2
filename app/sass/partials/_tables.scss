@@ -1,0 +1,184 @@
+// USERS TABLE
+// ========================================================================== */
+.table__users {
+    font-size: $small-text;
+    width: 100%;
+    border: 1px solid $border-color-default;
+    background-image: linear-gradient(to right, $background-color-primary 0%,$background-color-primary 40%,$background-color-default 40%);
+
+    tr {
+        display: block;
+    }
+
+    tbody .user__cell, td {
+        display: inline-block;
+        width: 100%;
+        text-align: left;
+        border-bottom: 1px solid $border-color-default;
+    }
+
+    tbody tr {
+        border-bottom: 10px solid $background-color-default;
+    }
+
+    td[data-header]::before, th[data-header]::before {
+        font-weight: bold;
+        display: inline-block;
+        padding: 10px;
+        content: attr(data-header);
+    }
+}
+
+.table__users thead {
+    display: block;
+    text-align: center;
+    background-image: linear-gradient(to bottom, $background-color-default 0%, #f3f3f3 100%);
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.08);
+}
+
+.user__header, th.user__cell {
+    font-weight: bold;
+}
+
+thead .user__cell {
+    display: block;
+    padding: 10px;
+    text-align: center;
+}
+
+.user__cell__header, .user__header {
+    display: none;
+}
+
+tbody th.user__cell {
+    border-top: 1px solid $border-color-default;
+}
+
+.responsive__cell {
+    float: right;
+    width: 60%;
+    padding: 10px;
+    border-left: 1px solid $border-color-default;
+}
+
+// BREAKPOINT: min small
+@include breakpoint(small) {
+
+    .table__users thead {
+        display: table-header-group;
+    }
+
+    .table__users {
+        text-align: left;
+        background-image: none;
+    }
+
+    .user__header {
+        display: table-cell;
+        text-align: center;
+    }
+
+    .user__cell__header {
+        display: inline-block;
+
+        .ws--sort--down {
+            font-size: 16px;
+        }
+    }
+
+    .responsive__header__label {
+        display: none;
+    }
+
+    // Users table - body
+    .table__users tr:nth-child(even) {
+        background-color: lighten($background-color-primary, .7843); // #fafafa
+    }
+
+    .table__users {
+        td {
+            text-align: center;
+        }
+
+        tr {
+            display: table-row;
+        }
+
+        tbody .user__cell, td {
+            display: table-cell;
+            width: auto;
+            padding: 15px 10px;
+            border: 1px solid $border-color-default;
+            border-bottom: 0;
+            background-color: inherit;
+        }
+
+        tbody tr {
+            border-bottom: 0;
+        }
+
+        td[data-header]::before, th[data-header]::before {
+            padding: 0;
+            content: none;
+        }
+    }
+
+    .table__users tbody .user__cell {
+        width: percentage(260/940);
+    }
+
+    .responsive__cell {
+        display: inline;
+        float: none;
+        width: auto;
+        padding: 0;
+        border: none;
+    }
+}// -- end breakpoint 768
+
+// Users table - user cell
+.user__cell {
+    text-align: left;
+}
+
+.wrap__icon {
+    position: relative;
+    display: block;
+    padding-right: 20px;
+}
+
+.wrap__icon .icon__right {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -.5em;
+}
+
+.user__cell__image {
+    width: 25px;
+    height: 23px;
+    margin-right: 6px;
+    vertical-align: middle;
+    border-radius: 2px;
+}
+
+.user__cell__link {
+    @extend %no-underline-to-underline;
+    font-weight: bold;
+    line-height: 120%;
+    display: inline-block;
+    width: calc(100% - 60px);
+    vertical-align: middle;
+    color: $foreground-color-default;
+}
+
+.table__users .tr--selected {
+    background-color: lighten(saturate(adjust-hue($theme-color-primary, 3.1759), 10.5675), 52.9412) !important;  // #e8f6fe;
+}
+
+// Users table - footer block
+.table__block__footer {
+    border: 1px solid $border-color-default;
+    border-top: 0;
+    background-color: $background-color-primary;
+}
